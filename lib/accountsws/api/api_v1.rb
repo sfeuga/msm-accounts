@@ -43,10 +43,6 @@ module AccountsWS
         contact_email: 'sfeuga@member.fsf.org'
       }
 
-    route :get, 'ping' do
-      { ping: 'pong' }
-    end
-
     route :any, '*path' do
       error!('Not found', 404)
     end
