@@ -1,0 +1,60 @@
+{
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    }
+  ],
+  "description": "API service to manage Music School accounts",
+  "env": {
+    "DEFAULT_TTL": {
+      "description": "Define the default cache TTL (in seconds)",
+      "required": false
+    },
+    "JWT_PUBLIC_KEY": {
+      "description": "JWT public key",
+      "required": false
+    },
+    "LANG": {
+      "description": "Default languages",
+      "value": "en_US.UTF-8"
+    },
+    "RACK_CORS_ORIGINS": {
+      "description": "Rack Cors Origins (by default: *)",
+      "required": false
+    },
+    "RACK_CORS_RESOURCE": {
+      "description": "Rack Cors resource (by default: *)",
+      "required": false
+    },
+    "RACK_ENV": {
+      "description": "Rack environment",
+      "required": false
+    },
+    "REDIS_URL": {
+      "description": "Redis URL",
+      "required": false
+    },
+    "ROLLBAR_ACCESS_TOKEN": {
+      "description": "Rollbar Access Token",
+      "required": false
+    },
+    "ROLLBAR_ENDPOINT": {
+      "description": "Rollbar API endpoint",
+      "required": false
+    },
+    "WEB_TIMEOUT": {
+      "description": "Default API timeout (in seconds)",
+      "required": false
+    }
+  },
+  "image": "heroku/ruby",
+  "keywords": [
+    "accounts",
+    "api",
+    "ruby"
+  ],
+  "name": "Accounts API",
+  "repository": "https://github.com/sfeuga/msm-accounts",
+  "success_url": "/api/v1/swagger.json"
+}

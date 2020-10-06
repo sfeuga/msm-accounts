@@ -1,0 +1,17 @@
+version: '2'
+services:
+  bundler:
+    image: ruby:2.7.2-alpine
+    volumes:
+      - /bundle
+
+  accounts:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - "${PWD}:/app"
+    volumes_from:
+      - bundler
+    command: bundle exec foreman start
